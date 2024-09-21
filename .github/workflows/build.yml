@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        build: [linux, windows]
+        build: [windows]
         include:
         - build: windows
           os: windows-2019
@@ -15,7 +15,6 @@ jobs:
           target: x86_64-pc-windows-msvc
           archive-name: NodeInject-windows.7z
       fail-fast: false
-
     steps:
     - name: Checkout NodeInject 
       uses: actions/checkout@v2
